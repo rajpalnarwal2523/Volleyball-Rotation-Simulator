@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volleyball Rotation Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main id="setupScreen" class="setup-container">
+
+        <h1>Volleyball Rotation Simulator</h1>
+        <div class="player-count">
+            <label for="playerCount">Number of Players:</label>
+
+            <select id="playerCount">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+
+        <div id="players"></div>
+
+        <button id="continueButton">Continue</button>
+
+    </main>
+
+    <!-- COURT SCREEN -->
+    <main id="courtScreen" class="court-container hidden">
+
+        <h1>Starting Lineup</h1>
+
+        <div id="rotationNumber">
+            Rotation 1
+        </div>
+
+        <div class="court">
+
+            <div class="net">
+                NET
+            </div>
+
+            <div class="court-row">
+                <div class="position" id="position4"></div>
+                <div class="position" id="position3"></div>
+                <div class="position" id="position2"></div>
+            </div>
+
+            <div class="court-row">
+                <div class="position" id="position5"></div>
+                <div class="position" id="position6"></div>
+                <div class="position" id="position1"></div>
+            </div>
+
+        </div>
+
+        <div class="bench-section">
+
+            <h2>Bench</h2>
+
+            <div id="benchPlayers"></div>
+
+        </div>
+
+        <div class="rotation-controls">
+            <button id="previousButton">← Previous</button>
+            <button id="nextButton">Next →</button>
+        </div>
+
+        <div class="substitution-section">
+
+            <h2>Substitution</h2>
+
+            <div class="substitution-controls">
+
+                <div>
+                    <label for="courtPlayerSelect">
+                        Player on Court
+                    </label>
+
+                    <select id="courtPlayerSelect"></select>
+                </div>
+
+                <div>
+                    <label for="benchPlayerSelect">
+                        Bench Player
+                    </label>
+
+                    <select id="benchPlayerSelect"></select>
+                </div>
+
+            </div>
+
+            <button id="substituteButton">
+                Make Substitution
+            </button>
+
+        </div>
+
+        <button id="backButton">Back</button>
+
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
